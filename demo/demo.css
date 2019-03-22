@@ -1,0 +1,17 @@
+/*
+* Demo CSS Sheet
+*/
+
+/* Force Tags to be the exact size they say they are! */
+* { box-sizing: border-box; }
+div { box-sizing: border-box; }
+span { box-sizing: border-box; }
+* { font-family: arial;}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}

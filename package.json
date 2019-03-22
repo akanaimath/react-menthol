@@ -1,0 +1,59 @@
+{
+  "name": "react-menthol",
+  "version": "0.1.0",
+  "description": "React dom elements extensively used while creating components.",
+  "main": "build/menthol.js",
+  "scripts": {
+    "build": "babel --source-maps inline src --out-dir build --minified --compact true --retain-lines",
+    "watch": "rm -f build/*.js build/*.map && babel --source-maps inline src --out-dir build --minified --compact true --retain-lines --watch",
+    "demo": "webpack -d",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akanaimath/react-menthol.git"
+  },
+  "keywords": [
+    "React",
+    "Maintenace",
+    "Error",
+    "NoData",
+    "Tooltip",
+    "Heading + help",
+    "Legend"
+  ],
+  "files": [
+    "build/",
+    "menthol.css"
+  ],
+  "author": "akanaimath",
+  "license": "MIT",
+  "dependencies": {
+    "react": "16.x",
+    "react-dom": "16.x",
+    "react-icons": "^3.5.0",
+    "react-utility": "^1.0.10"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-function-bind": "^7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
+    "@babel/plugin-transform-react-jsx-compat": "^7.2.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.4.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "7.x",
+    "babel-plugin-minify-dead-code-elimination": "0.x",
+    "css-loader": "^2.1.1",
+    "mocha": "4.x",
+    "react-addons-test-utils": "^15.6.2",
+    "style-loader": "0.x",
+    "uglifyjs-webpack-plugin": "^2.1.2",
+    "unit.js": "^2.1.0",
+    "url-loader": "^1.1.2",
+    "webpack": "3.x"
+  }
+}
