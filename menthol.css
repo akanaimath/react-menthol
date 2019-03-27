@@ -1,5 +1,164 @@
 @charset "UTF-8";
+* { box-sizing: border-box; }
+div { box-sizing: border-box; }
+span { box-sizing: border-box; }
+* { font-family: arial;}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
 .consume {
     width:100%;
     height: 100%;
+}
+.shape-octagon {
+    position: relative;
+    cursor: pointer;
+    top: 34%;
+    left: 40%;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    float: left;
+    overflow: hidden;
+}
+.error-msg {
+    background-color: #B7CEE5;
+    color: black;
+    padding: 0 10px;
+    height: 100%;
+    border-radius: 6px;
+    overflow-y: auto;
+    -ms-overflow-y:auto;
+    white-space: pre-wrap;
+}
+.error-label {
+    position: relative;
+    text-align: center;
+    line-height: 10px;
+    z-index: 1;
+    font-size: 9px;
+    font-weight: bold;
+    color: white;
+}
+.error-shape {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    background: #F04848;
+    border: 2px solid white;
+    position:absolute;
+}
+.error-shape:before {
+    /* There needs to be a negative value here to cancel
+     * out the width of the border. It's currently -2px,
+     * but if the border were 5px, then it'd be -5px.
+     */
+    top: -2px; 
+    right: -2px; 
+    bottom: -2px; 
+    left: -2px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    content: '';
+    border: inherit;
+    position: absolute;
+}
+.error-close {
+    position: absolute;
+    cursor: pointer;
+    right: 1px;
+    border: 1px solid #63738A;
+    padding: 2px;
+    border-radius: 3px;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+    height: 22px;
+    width: 22px;
+    background-color: rgba(0,0,0,0.5);
+    color:  white;
+    font-size: x-small;
+}
+.No-data-wrapper {
+    width:100%;
+    height: 100%;
+}
+.noData-heading {
+    text-align: center;
+    font-weight: bold;
+}
+.noData-iconDiv {
+    padding: 5%;
+}
+.noData-iconDiv .icon {
+    margin: 47%;
+    opacity: 0.4;
+    font-size: xx-large;
+}
+.noData-paragraph {
+    text-align: center;
+    font-size: 12px;
+    word-spacing: 2px;
+}
+.legend-wrapper {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.legend-list {
+    display: inline-flex;
+    margin-left: 7px;
+    font-size: 14px;
+}
+.legend-tick {
+    width: 15px;
+    height: 11px;
+    margin-top: 3px;
+}
+.legend-name {
+    margin-left: 3px;
+}
+.menthol-tooltip {
+    visibility: hidden;
+    border-radius: 6px;
+    padding: 3px 3px;
+    font-size: 12px;
+    z-index: 1;
+    white-space: normal;
+    background-color: rgba(255, 255, 255,0.95);
+    color: black;
+    box-shadow: 1px 1px 5px #63738A;
+    border: 1px solid #D8DDE6;
+
+    visibility: unset;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    white-space: pre-wrap;
+    /* text-align: justify; */
+    overflow: auto;
+    resize: both;
+}
+.menthol-tooltip-heading {
+    border-bottom: 1px solid #63738A;
+    font-size: 14px;
+    text-transform: capitalize;
 }
