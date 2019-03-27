@@ -41,12 +41,12 @@ class Loading extends Component {
     }
 }
 const css = {
-    width
+    // width
 }
 Loading.defaultProps = {
     loadSvg: false,
     svgType: 'balls', // balls,bars,bubbles,cubes,spin,spinningBubbles,spokes
-    loadingImg: '/images/spinner.gif',
+    loadingImg: '../public/images/spinner.gif',
     alt: 'img not found',
     width: '90px',
     height: '90px',

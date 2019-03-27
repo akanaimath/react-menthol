@@ -2,7 +2,6 @@
     "compact": true,
     "presets": [
         [
-            "es2015",
             "react"
         ],
         [
@@ -11,12 +10,8 @@
         ]
     ],
     "plugins": [
-        "@babel/plugin-proposal-object-rest-spread",
-        "@babel/register",
-        "@babel/cli @babel/preset-env",
-        "@babel/preset-react",
-        "@babel/plugin-transform-react-jsx-compat",
-        "@babel/plugin-proposal-function-bind",
-        "@babel/plugin-proposal-class-properties"
+        "babel-plugin-transform-react-jsx",
+        "transform-class-properties",
+        "transform-object-rest-spread",
     ]
 }

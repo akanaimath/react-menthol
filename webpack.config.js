@@ -25,15 +25,11 @@ var config = {
 				exclude: /node_modules/,
 				query: {
 					compact: false,
-					presets: [["es2015",'react'], ['env', {}]],
+					presets: [['react'], ['env', {}]],
 					plugins: [
-						"@babel/plugin-proposal-object-rest-spread",
-						"@babel/register",
-						"@babel/cli @babel/preset-env",
-						"@babel/preset-react",
-						"@babel/plugin-transform-react-jsx-compat",
-						"@babel/plugin-proposal-function-bind",
-						"@babel/plugin-proposal-class-properties"
+						"babel-plugin-transform-react-jsx",
+						"transform-class-properties",
+						"transform-object-rest-spread",
 					]
 
 				}
@@ -47,7 +43,42 @@ var config = {
 					name: '[name].[ext]',
 					outputPath: 'images/'
 				}
-			},],
+			}, {
+				test : /\.(jpe?g|png|gif)$/i,
+				loader : "file-loader",
+				query : {
+					name : '[name].[ext]',
+					outputPath : 'images/'
+				}
+			},  {
+				test : /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+				loader : 'url-loader?limit=100000',
+				query : {
+					name : '[name].[ext]',
+					outputPath : 'fonts/'
+				}
+			}, {
+				test : /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+				loader : 'url-loader?limit=100000',
+				query : {
+					name : '[name].[ext]',
+					outputPath : 'fonts/'
+				}
+			}, {
+				test : /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+				loader : 'url-loader?limit=100000',
+				query : {
+					name : '[name].[ext]',
+					outputPath : 'fonts/'
+				}
+			}, {
+				test : /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+				loader : 'url-loader?limit=100000',
+				query : {
+					name : '[name].[ext]',
+					outputPath : 'fonts/'
+				}
+			} ],
 	},
 	// optimization: {
 	// 	minimizer: [
