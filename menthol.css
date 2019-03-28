@@ -106,6 +106,7 @@ html, body {
 }
 .noData-iconDiv {
     padding: 5%;
+    margin-left: 40%;
 }
 .noData-iconDiv .icon {
     margin: 47%;

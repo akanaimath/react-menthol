@@ -2,7 +2,7 @@
 import React, { PropTypes } from 'react';
 import { render } from 'react-dom';
 import { cloneObject, mergeObjects, cloneProps } from 'react-utility';
-import { MIcon, Loading, Error, Maintenance, NoData, Legend, Tooltip } from '../build/menthol.js';
+import {  Loading, Error, Maintenance, NoData, Legend, Tooltip } from '../build/menthol.js';
 
 class Demo extends React.Component {
 	constructor(props) {
@@ -12,15 +12,16 @@ class Demo extends React.Component {
 	render() {
 		return (
 			<div className="demo-consume">
-				<div>This is demo</div>
+				<div className="demo-header">Demo for MENTHOL Elements </div>
 				<div className="demo-comp-container">
-					<div className="demo-comp-box"><Loading /></div>
-					<div className="demo-comp-box"><MIcon /></div>
-					<div className="demo-comp-box"><Error /></div>
-					<div className="demo-comp-box"><Maintenance /></div>
-					<div className="demo-comp-box"><NoData /></div>
-					<div className="demo-comp-box"><Legend data={this.state.legendData} /></div>
+					<div className="demo-comp-box"><div className="demo-comp-box-heading">Loading Demo</div><Loading /></div>
+					{/* <div className="demo-comp-box"><MIcon /></div> */}
+					<div className="demo-comp-box"><div className="demo-comp-box-heading">Error Demo</div><Error /></div>
+					<div className="demo-comp-box"><div className="demo-comp-box-heading">Maintenance Demo</div><Maintenance /></div>
+					<div className="demo-comp-box"><div className="demo-comp-box-heading">NoData Demo</div><NoData /></div>
+					<div className="demo-comp-box"><div className="demo-comp-box-heading">Legend Demo</div><Legend data={this.state.legendData} /></div>
 					<div className="demo-comp-box">
+					<div className="demo-comp-box-heading">Tooltip Demo</div>
 						<Tooltip
 							heading="Tooltip heading"
 							data={this.state.tooltipData}

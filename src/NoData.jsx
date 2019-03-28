@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 
 import { cloneProps } from 'react-utility';
+import { MdLayers } from "react-icons/md";
 
 class NoData extends Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class NoData extends Component {
   render() {
     return (
       <div className={this.state.classNameWrapper}>
-        <div className={this.state.classNameIconDiv}>ICON</div>
+        <div className={this.state.classNameIconDiv}><MdLayers size={32} color ={"black"}/></div>
         <div className={this.state.classNameHeading}>{this.state.heading}</div>
         <p className={this.state.classNameParagraph}>{this.state.paragraph}</p>
       </div>

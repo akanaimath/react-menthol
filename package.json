@@ -7,7 +7,7 @@
     "build": "babel --source-maps inline src --out-dir build --minified --compact true --retain-lines",
     "build_watch": "rm -f build/*.js build/*.map && babel --source-maps inline src --out-dir build --minified --compact true --retain-lines --watch",
     "demo": "webpack -d",
-    "demo_watch" :"npm run build_watch && npm run demo --watch",
+    "demo_watch": "npm run build_watch && npm run demo --watch",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -40,6 +40,7 @@
     "babel-core": "6.x",
     "babel-loader": "7.x",
     "babel-plugin-minify-dead-code-elimination": "0.x",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-class-properties": "6.x",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "6.x",

@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 
 import { cloneProps } from 'react-utility';
+import { MdClose } from "react-icons/md";
 
 class Error extends Component {
 	constructor(props) {
@@ -26,7 +27,7 @@ class Error extends Component {
 				{this.state.showErrorMsg &&
 					<div className={this.state.className}>
 						<div className={this.state.classNameClose} onClick={this.handleClose} title="close">
-							Close
+							<MdClose size={16} color={"white"}/>
             </div>
 						<div className={this.state.classNameErrorMsg}>{`${this.state.error}`}</div>
 					</div>
