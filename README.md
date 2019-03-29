@@ -10,7 +10,7 @@ yarn add react-menthol;
 Usage 
 ```
 import { Error, Loading, Maintenance, NoData, Tooltip, Legend } from 'react-menthol';
-import 'menthol.css';
+import 'react-menthol/menthol.css';
 ```
 ## Packages
 - [Error](#error)
@@ -25,7 +25,7 @@ This component is used to show/hide a clean representation for error msg.
 
 ```
 import { Error } from 'react-menthol' ;  
-import 'menthol.css';
+import 'react-menthol/menthol.css';
 
 render( 
         <div>
@@ -58,7 +58,7 @@ This generic component is used for displaying loading icon on the doms when need
 
 ```
 import { Loading } from 'react-menthol' ;  
-import 'menthol.css';
+import 'react-menthol/menthol.css';
 
 render( 
         <div>
@@ -91,7 +91,7 @@ render(
 This Component is used when its parent is still under development/not available at the moment
 ```
 import { Maintenance } from 'react-menthol' ;  
-import 'menthol.css';
+import 'react-menthol/menthol.css';
 
 render( 
         <div>
@@ -121,7 +121,7 @@ This generic component is used in the components to show beautifully when the da
 
 ```
 import { NoData } from 'react-menthol' ;  
-import 'menthol.css';
+import 'react-menthol/menthol.css';
 
 render( 
         <div>
@@ -156,7 +156,7 @@ The data passed is looped and check if the key is present in dataObj then it wil
 
 ```
 import { Tooltip } from 'react-menthol' ;  
-import 'menthol.css';
+import 'react-menthol/menthol.css';
 
 render( 
         <div>
@@ -190,7 +190,7 @@ render(
 
 ```
 import { Legend } from 'react-menthol' ;  
-import 'menthol.css';
+import 'react-menthol/menthol.css';
 
 render( 
         <div>
@@ -229,3 +229,5 @@ For Demo
 npm run demo
 ```
 go to file system and locate the react-menthol/demo/index.html
+
+Icons used from [react-icons](https://react-icons.netlify.com/#/)
