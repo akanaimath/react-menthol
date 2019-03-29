@@ -25,6 +25,7 @@
   ],
   "files": [
     "build/",
+    "public/",
     "menthol.css"
   ],
   "author": "akanaimath",
